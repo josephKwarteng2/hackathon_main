@@ -13,7 +13,7 @@ import {
   newArrFour,
 } from "../assets/images/index";
 
-// NavBarList Start here
+// NavBarList
 export const navBarList = [
   {
     _id: 1001,
@@ -25,24 +25,15 @@ export const navBarList = [
     title: "Shop",
     link: "/shop",
   },
-  {
-    _id: 1003,
-    title: "About",
-    link: "/about",
-  },
+
   {
     _id: 1004,
     title: "Contact",
     link: "contact",
   },
-  {
-    _id: 1005,
-    title: "Journal",
-    link: "/journal",
-  },
 ];
 
-// Special Offer data Start here
+// Special Offer
 export const SplOfferData = [
   {
     _id: "201",
@@ -82,7 +73,7 @@ export const SplOfferData = [
   },
 ];
 
-//  PaginationItems Start here
+//  PaginationItems
 
 export const paginationItems = [
   {

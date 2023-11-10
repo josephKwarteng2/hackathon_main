@@ -10,7 +10,6 @@ const SignIn = () => {
     // Implement your sign-in logic here
     console.log(values);
 
-    // Assuming successful sign-in, navigate to the home page
     navigate("/home");
   };
 
@@ -58,7 +57,7 @@ const SignIn = () => {
 
               <div className="flex flex-col gap-.5">
                 <p className="font-titleFont text-base font-semibold text-gray-600">
-                  Password
+                  Password Forgot
                 </p>
                 <Field
                   type="password"

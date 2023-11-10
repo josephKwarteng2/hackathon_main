@@ -1,29 +1,7 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import FooterListTitle from "./FooterListTitle";
-import { paymentCard } from "../../../assets/images";
-import Image from "../../designLayouts/Image";
 
 const Footer = () => {
-  const [emailInfo, setEmailInfo] = useState("");
-  const [subscription, setSubscription] = useState(false);
-  const [errMsg, setErrMsg] = useState("");
-
-  const emailValidation = () => {
-    return String(emailInfo).toLocaleLowerCase();
-  };
-
-  const handleSubscription = () => {
-    if (emailInfo === "") {
-      setErrMsg("Please provide an Email !");
-    } else if (!emailValidation(emailInfo)) {
-      setErrMsg("Please give a valid Email!");
-    } else {
-      setSubscription(true);
-      setErrMsg("");
-      setEmailInfo("");
-    }
-  };
   return (
     <div className="w-full bg-[#F5F5F3] py-20">
       <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-6 px-4 gap-10">
@@ -72,52 +50,6 @@ const Footer = () => {
               Payment Options
             </li>
           </ul>
-        </div>
-        <div className="col-span-2 flex flex-col items-center w-full px-4">
-          <FooterListTitle title="Subscribe to our newsletter." />
-          <div className="w-full">
-            <p className="text-center mb-4">Subscribe to our page</p>
-            {subscription ? (
-              <motion.p
-                initial={{ x: 20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="w-full text-center text-base font-titleFont font-semibold text-green-600"
-              >
-                Subscribed Successfully !
-              </motion.p>
-            ) : (
-              <div className="w-full flex-col xl:flex-row flex justify-between items-center gap-4">
-                <div className="flex flex-col w-full">
-                  <input
-                    onChange={(e) => setEmailInfo(e.target.value)}
-                    value={emailInfo}
-                    className="w-full h-12 border-b border-gray-400 bg-transparent px-4 text-primeColor text-lg placeholder:text-base outline-none"
-                    type="text"
-                    placeholder="Insert your email ...*"
-                  />
-                  {errMsg && (
-                    <p className="text-red-600 text-sm font-semibold font-titleFont text-center animate-bounce mt-2">
-                      {errMsg}
-                    </p>
-                  )}
-                </div>
-                <button
-                  onClick={handleSubscription}
-                  className="bg-white text-lightText w-[30%] h-10 hover:bg-black hover:text-white duration-300 text-base tracking-wide"
-                >
-                  Subscribe
-                </button>
-              </div>
-            )}
-
-            <Image
-              className={`w-[80%] lg:w-[60%] mx-auto ${
-                subscription ? "mt-2" : "mt-6"
-              }`}
-              imgSrc={paymentCard}
-            />
-          </div>
         </div>
       </div>
     </div>

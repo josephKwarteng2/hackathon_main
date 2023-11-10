@@ -9,7 +9,6 @@ import {
 import Footer from "./components/home/Footer/Footer";
 import Header from "./components/home/Header/Header";
 import HeaderBottom from "./components/home/Header/HeaderBottom";
-import SpecialCase from "./components/SpecialCase/SpecialCase";
 import About from "./pages/About/About";
 import SignIn from "./pages/Account/SignIn";
 import SignUp from "./pages/Account/SignUp";
@@ -29,7 +28,6 @@ const Layout = () => {
     <div>
       <Header />
       <HeaderBottom />
-      <SpecialCase />
       <ScrollRestoration />
       <Outlet />
       <NewArrivals />
