@@ -7,7 +7,7 @@ const SignIn = () => {
   const navigate = useNavigate();
 
   const handleSignIn = (values, actions) => {
-    // Implement your sign-in logic here
+    // Implementing ign-in logic
     console.log(values);
 
     navigate("/home");
@@ -55,9 +55,9 @@ const SignIn = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-.5">
+              <div className="flex flex-col gap-.20">
                 <p className="font-titleFont text-base font-semibold text-gray-600">
-                  Password Forgot
+                  Password
                 </p>
                 <Field
                   type="password"
