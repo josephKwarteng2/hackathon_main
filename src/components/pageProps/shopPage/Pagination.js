@@ -26,12 +26,15 @@ function Items({ currentItems }) {
 }
 
 const Pagination = ({ itemsPerPage }) => {
+  //determines the start of index of items
   const [itemOffset, setItemOffset] = useState(0);
+  //displays the starting index of items
   const [itemStart, setItemStart] = useState(1);
 
   const endOffset = itemOffset + itemsPerPage;
 
   const currentItems = items.slice(itemOffset, endOffset);
+  // Calculates the total number of items needed for pagination
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event) => {
